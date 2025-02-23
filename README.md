@@ -68,7 +68,7 @@ Before you begin, ensure you have the following installed:
        ```bash
        {
        "name": "Product Name",
-       "description": "Product Description",
+       "description": "Product Description"
        }
        ```
    - Response: 200
@@ -82,15 +82,25 @@ Before you begin, ensure you have the following installed:
      ```
      http://localhost:8080/api/v1/products/search?query=laptop
      ```
-    - Response: 200 OK
-      ```bash
-      [
-       {
-        "id": 1,
-        "name": "Lenovo ideapad",
-        "description": "Laptop",
-        "dateCreated": "2024-09-28",
-        "dateUpdated": "2024-09-28"
-       }
-      ]
-      ```
+     - Response: 200 OK
+       ```bash
+
+        {
+        "success": {
+            "data": null,
+            "dataList": [
+                {
+                    "id": 1,
+                    "name": "Lenovo Ideapad",
+                    "description": "Laptop",
+                    "dateCreated": "2025-02-23",
+                    "dateUpdated": "2025-02-23"
+                }
+            ],
+            "responseMessage": "List of Products retrieved successfully."
+        },
+        "error": null
+        }
+       ```
+      
+
